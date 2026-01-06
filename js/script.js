@@ -1,253 +1,271 @@
-// ===== MOBILE MENU TOGGLE =====
-const menuToggle = document.querySelector('.menu-toggle');
-const navMenu = document.querySelector('.nav-menu');
+// Grace Community Church - Main JavaScript File
 
-if (menuToggle && navMenu) {
-    menuToggle.addEventListener('click', () => {
-        navMenu.classList.toggle('active');
-        const icon = menuToggle.querySelector('i');
-        if (navMenu.classList.contains('active')) {
-            icon.classList.remove('fa-bars');
-            icon.classList.add('fa-times');
-        } else {
-            icon.classList.remove('fa-times');
-            icon.classList.add('fa-bars');
-        }
-    });
-
-    // Close menu when clicking on a link
-    const navLinks = document.querySelectorAll('.nav-link');
-    navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            navMenu.classList.remove('active');
-            const icon = menuToggle.querySelector('i');
-            icon.classList.remove('fa-times');
-            icon.classList.add('fa-bars');
-            
-            // Update active link
-            navLinks.forEach(item => item.classList.remove('active'));
-            link.classList.add('active');
-        });
-    });
-
-    // Close menu when clicking outside
-    document.addEventListener('click', (event) => {
-        if (!navMenu.contains(event.target) && !menuToggle.contains(event.target)) {
-            navMenu.classList.remove('active');
-            const icon = menuToggle.querySelector('i');
-            icon.classList.remove('fa-times');
-            icon.classList.add('fa-bars');
-        }
-    });
-}
-
-// ===== SMOOTH SCROLL FOR ANCHOR LINKS =====
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        
-        const targetId = this.getAttribute('href');
-        if (targetId === '#') return;
-        
-        const targetElement = document.querySelector(targetId);
-        if (targetElement) {
-            const headerHeight = document.querySelector('.navbar').offsetHeight;
-            const targetPosition = targetElement.offsetTop - headerHeight - 20;
-            
-            window.scrollTo({
-                top: targetPosition,
-                behavior: 'smooth'
-            });
-        }
-    });
-});
-
-// ===== ACTIVE NAV LINK ON SCROLL =====
-window.addEventListener('scroll', () => {
-    const sections = document.querySelectorAll('section');
-    const navLinks = document.querySelectorAll('.nav-link');
-    
-    let current = '';
-    const scrollPosition = window.scrollY + 100;
-    
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-        
-        if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-            current = section.getAttribute('id');
-        }
-    });
-    
-    navLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href') === `#${current}`) {
-            link.classList.add('active');
-        }
-    });
-});
-
-// ===== SERVICE CARD INTERACTIONS =====
-const serviceCards = document.querySelectorAll('.service-card');
-serviceCards.forEach(card => {
-    card.addEventListener('mouseenter', function() {
-        this.style.transform = this.classList.contains('featured') 
-            ? 'translateY(-5px) scale(1.05)'
-            : 'translateY(-5px)';
-    });
-    
-    card.addEventListener('mouseleave', function() {
-        this.style.transform = this.classList.contains('featured') 
-            ? 'scale(1.05)'
-            : 'translateY(0)';
-    });
-});
-
-// ===== MINISTRY CARD INTERACTIONS =====
-const ministryCards = document.querySelectorAll('.ministry-card');
-ministryCards.forEach(card => {
-    card.addEventListener('mouseenter', function() {
-        this.style.transform = 'translateY(-5px)';
-    });
-    
-    card.addEventListener('mouseleave', function() {
-        this.style.transform = 'translateY(0)';
-    });
-});
-
-// ===== HIGHLIGHT ITEM INTERACTIONS =====
-const highlightItems = document.querySelectorAll('.highlight-item');
-highlightItems.forEach(item => {
-    item.addEventListener('mouseenter', function() {
-        this.style.transform = 'translateY(-5px)';
-    });
-    
-    item.addEventListener('mouseleave', function() {
-        this.style.transform = 'translateY(0)';
-    });
-});
-
-// ===== BUTTON CLICK TRACKING (DEMO ANALYTICS) =====
-const whatsappButtons = document.querySelectorAll('.btn-whatsapp, .btn-whatsapp-large, .whatsapp-float');
-whatsappButtons.forEach(button => {
-    button.addEventListener('click', function() {
-        console.log('WhatsApp CTA clicked - This would trigger analytics in a live site');
-        console.log('CTA Location: ' + this.textContent.trim());
-        
-        // In a real implementation:
-        // gtag('event', 'whatsapp_click', { 
-        //     'event_category': 'conversion',
-        //     'event_label': this.textContent.trim()
-        // });
-    });
-});
-
-// ===== VISIT PLAN BUTTON TRACKING =====
-const visitButtons = document.querySelectorAll('[href="#contact"]');
-visitButtons.forEach(button => {
-    if (button.textContent.includes('Visit') || button.textContent.includes('Plan')) {
-        button.addEventListener('click', function() {
-            console.log('Visit planning button clicked');
-            console.log('Button text: ' + this.textContent.trim());
-            
-            // In a real implementation:
-            // gtag('event', 'visit_plan_click', {
-            //     'event_category': 'engagement'
-            // });
-        });
-    }
-});
-
-// ===== PRAYER REQUEST TRACKING =====
-const prayerButtons = document.querySelectorAll('a[href*="prayer"]');
-prayerButtons.forEach(button => {
-    button.addEventListener('click', function() {
-        console.log('Prayer request button clicked');
-        
-        // In a real implementation:
-        // gtag('event', 'prayer_request_click', {
-        //     'event_category': 'engagement'
-        // });
-    });
-});
-
-// ===== INITIALIZE ON DOM LOAD =====
+// DOM Ready
 document.addEventListener('DOMContentLoaded', function() {
-    // Set current year in footer
-    const currentYear = new Date().getFullYear();
-    document.querySelector('.footer-bottom p').innerHTML = 
-        document.querySelector('.footer-bottom p').innerHTML.replace('2024', currentYear);
+    // Mobile Navigation Toggle
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('nav ul');
     
-    // Add loading animation class
-    document.body.classList.add('loaded');
-    
-    // Log demo site visit
-    console.log('=== Grace Community Church Demo Site ===');
-    console.log('This is a demo website created by KaynAero Technocrats');
-    console.log('Demonstrating best practices for church websites in Kenya');
-    console.log('=== Commercial-Grade Features Implemented ===');
-    console.log('1. Strong Hero Section with clear CTAs');
-    console.log('2. Specific, non-generic copy throughout');
-    console.log('3. Clear service times hierarchy');
-    console.log('4. Multiple conversion-focused CTAs');
-    console.log('5. Improved visual hierarchy and spacing');
-    console.log('6. Comprehensive footer with all contact info');
-    console.log('7. Trust elements: mission, vision, leadership');
-    
-    // Initialize any animations
-    setTimeout(() => {
-        const heroTitle = document.querySelector('.hero-title');
-        if (heroTitle) {
-            heroTitle.style.opacity = '1';
-            heroTitle.style.transform = 'translateY(0)';
-        }
-    }, 300);
-});
-
-// ===== FORM SUBMISSION HANDLER (FOR DEMO PURPOSES) =====
-// This would be replaced with Netlify form handling or similar in production
-document.addEventListener('submit', function(e) {
-    if (e.target.tagName === 'FORM') {
-        e.preventDefault();
-        console.log('Form submitted - In production, this would send data to server');
+    if (hamburger && navMenu) {
+        hamburger.addEventListener('click', function() {
+            navMenu.classList.toggle('active');
+            hamburger.innerHTML = navMenu.classList.contains('active') ? 
+                '<i class="fas fa-times"></i>' : 
+                '<i class="fas fa-bars"></i>';
+        });
         
-        // Show success message
-        const form = e.target;
-        const successMessage = document.createElement('div');
-        successMessage.className = 'form-success';
-        successMessage.innerHTML = `
-            <i class="fas fa-check-circle"></i>
-            <h3>Thank You!</h3>
-            <p>Your message has been sent. We'll get back to you shortly.</p>
-        `;
+        // Close menu when clicking a link
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                hamburger.innerHTML = '<i class="fas fa-bars"></i>';
+            });
+        });
         
-        form.parentNode.insertBefore(successMessage, form.nextSibling);
-        form.style.display = 'none';
-        
-        // In a real implementation, you would:
-        // 1. Submit the form via AJAX
-        // 2. Show loading state
-        // 3. Show success/error message based on response
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            if (!event.target.closest('nav') && !event.target.closest('.hamburger')) {
+                navMenu.classList.remove('active');
+                hamburger.innerHTML = '<i class="fas fa-bars"></i>';
+            }
+        });
     }
-});
-
-// ===== VISITOR FIRST TIME VISIT TRACKING =====
-if (!localStorage.getItem('grace_church_first_visit')) {
-    console.log('First time visitor detected');
-    localStorage.setItem('grace_church_first_visit', 'true');
     
-    // You could trigger a special welcome message or animation
-    setTimeout(() => {
-        const heroSection = document.querySelector('.hero');
-        if (heroSection) {
-            const welcomePulse = document.createElement('div');
-            welcomePulse.className = 'welcome-pulse';
-            welcomePulse.innerHTML = '<i class="fas fa-hand-wave"></i> Welcome!';
-            heroSection.appendChild(welcomePulse);
+    // Contact Form Handling
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
             
+            // Get form data
+            const formData = new FormData(this);
+            const submitBtn = this.querySelector('.btn');
+            const originalText = submitBtn.textContent;
+            
+            // Validate form
+            if (!validateForm(this)) {
+                return;
+            }
+            
+            // Show loading state
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+            submitBtn.disabled = true;
+            
+            // Simulate form submission (in real app, this would be an API call)
             setTimeout(() => {
-                welcomePulse.remove();
-            }, 3000);
+                // Show success message
+                showMessage('Message sent successfully! We\'ll get back to you soon.', 'success');
+                
+                // Reset form
+                contactForm.reset();
+                
+                // Reset button
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+            }, 2000);
+        });
+        
+        // Form validation
+        function validateForm(form) {
+            let isValid = true;
+            const requiredFields = form.querySelectorAll('[required]');
+            
+            requiredFields.forEach(field => {
+                if (!field.value.trim()) {
+                    showError(field, 'This field is required');
+                    isValid = false;
+                } else if (field.type === 'email' && !isValidEmail(field.value)) {
+                    showError(field, 'Please enter a valid email address');
+                    isValid = false;
+                } else if (field.type === 'tel' && !isValidPhone(field.value)) {
+                    showError(field, 'Please enter a valid phone number');
+                    isValid = false;
+                } else {
+                    clearError(field);
+                }
+            });
+            
+            return isValid;
         }
-    }, 1000);
-}
+        
+        function showError(field, message) {
+            clearError(field);
+            const errorDiv = document.createElement('div');
+            errorDiv.className = 'error-message';
+            errorDiv.style.color = '#dc3545';
+            errorDiv.style.fontSize = '0.875rem';
+            errorDiv.style.marginTop = '0.25rem';
+            errorDiv.textContent = message;
+            field.parentNode.appendChild(errorDiv);
+            field.style.borderColor = '#dc3545';
+        }
+        
+        function clearError(field) {
+            const errorDiv = field.parentNode.querySelector('.error-message');
+            if (errorDiv) {
+                errorDiv.remove();
+            }
+            field.style.borderColor = '#ddd';
+        }
+        
+        function isValidEmail(email) {
+            return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+        }
+        
+        function isValidPhone(phone) {
+            return /^[\d\s\-\+\(\)]{10,}$/.test(phone);
+        }
+        
+        function showMessage(message, type) {
+            // Remove existing messages
+            const existingMsg = document.querySelector('.form-message');
+            if (existingMsg) existingMsg.remove();
+            
+            // Create message element
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `form-message ${type}`;
+            messageDiv.style.padding = '1rem';
+            messageDiv.style.borderRadius = 'var(--border-radius)';
+            messageDiv.style.marginTop = '1rem';
+            messageDiv.style.fontWeight = '500';
+            
+            if (type === 'success') {
+                messageDiv.style.backgroundColor = 'rgba(40, 167, 69, 0.1)';
+                messageDiv.style.color = '#28a745';
+                messageDiv.style.border = '1px solid #28a745';
+            } else {
+                messageDiv.style.backgroundColor = 'rgba(220, 53, 69, 0.1)';
+                messageDiv.style.color = '#dc3545';
+                messageDiv.style.border = '1px solid #dc3545';
+            }
+            
+            messageDiv.textContent = message;
+            contactForm.appendChild(messageDiv);
+            
+            // Auto-remove after 5 seconds
+            setTimeout(() => {
+                messageDiv.remove();
+            }, 5000);
+        }
+    }
+    
+    // Sermon Filtering
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const sermonCards = document.querySelectorAll('.sermon-card');
+    
+    if (filterButtons.length > 0 && sermonCards.length > 0) {
+        filterButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                // Update active button
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                this.classList.add('active');
+                
+                const filterValue = this.getAttribute('data-filter');
+                
+                // Filter sermons
+                sermonCards.forEach(card => {
+                    if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
+                        card.style.display = 'block';
+                        setTimeout(() => {
+                            card.style.opacity = '1';
+                            card.style.transform = 'translateY(0)';
+                        }, 10);
+                    } else {
+                        card.style.opacity = '0';
+                        card.style.transform = 'translateY(20px)';
+                        setTimeout(() => {
+                            card.style.display = 'none';
+                        }, 300);
+                    }
+                });
+            });
+        });
+    }
+    
+    // Audio Player Simulation
+    const playButtons = document.querySelectorAll('.play-btn');
+    playButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const isPlaying = this.classList.contains('playing');
+            
+            // Toggle all players
+            playButtons.forEach(btn => {
+                btn.classList.remove('playing');
+                btn.innerHTML = '<i class="fas fa-play"></i>';
+            });
+            
+            if (!isPlaying) {
+                this.classList.add('playing');
+                this.innerHTML = '<i class="fas fa-pause"></i>';
+                // In a real app, this would control actual audio playback
+                console.log('Playing sermon audio...');
+            } else {
+                this.innerHTML = '<i class="fas fa-play"></i>';
+                console.log('Pausing sermon audio...');
+            }
+        });
+    });
+    
+    // Smooth Scrolling for Anchor Links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
+            
+            if (href !== '#') {
+                e.preventDefault();
+                const target = document.querySelector(href);
+                
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            }
+        });
+    });
+    
+    // Lazy Loading Images
+    if ('IntersectionObserver' in window) {
+        const imageObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    const src = img.getAttribute('data-src');
+                    
+                    if (src) {
+                        img.src = src;
+                        img.removeAttribute('data-src');
+                    }
+                    
+                    imageObserver.unobserve(img);
+                }
+            });
+        });
+        
+        document.querySelectorAll('img[data-src]').forEach(img => {
+            imageObserver.observe(img);
+        });
+    }
+    
+    // Current Year in Footer
+    const yearSpan = document.getElementById('current-year');
+    if (yearSpan) {
+        yearSpan.textContent = new Date().getFullYear();
+    }
+    
+    // Set active navigation link based on current page
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    const navLinks = document.querySelectorAll('nav a');
+    
+    navLinks.forEach(link => {
+        const linkPage = link.getAttribute('href');
+        if (linkPage === currentPage || 
+            (currentPage === '' && linkPage === 'index.html') ||
+            (currentPage === '/' && linkPage === 'index.html')) {
+            link.classList.add('active');
+        } else {
+            link.classList.remove('active');
+        }
+    });
+});

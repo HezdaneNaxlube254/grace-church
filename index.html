@@ -3,422 +3,336 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grace Community Church | Nairobi, Kenya</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Grace Community Church - Find Faith, Hope & Community</title>
+    <meta name="description" content="Welcome to Grace Community Church. A place to find faith, hope, and community in a warm, welcoming environment.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="nav-container">
-                <a href="#" class="logo">
-                    <div class="logo-icon">✝</div>
-                    <div class="logo-text">
-                        <span class="logo-primary">Grace Community Church</span>
-                        <span class="logo-subtitle">Nairobi, Kenya</span>
-                    </div>
-                </a>
-                <ul class="nav-menu">
-                    <li><a href="#home" class="nav-link active">Home</a></li>
-                    <li><a href="#about" class="nav-link">About</a></li>
-                    <li><a href="#services" class="nav-link">Services</a></li>
-                    <li><a href="#ministries" class="nav-link">Ministries</a></li>
-                    <li><a href="#contact" class="nav-link">Contact</a></li>
-                    <li><a href="#contact" class="btn btn-whatsapp-nav"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
-                </ul>
-                <button class="menu-toggle">
-                    <i class="fas fa-bars"></i>
-                </button>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-church"></i>
+                </div>
+                <div class="logo-text">
+                    <h1>Grace Community Church</h1>
+                    <p>Find Faith, Hope & Community</p>
+                </div>
             </div>
+            
+            <button class="hamburger" aria-label="Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="ministries.html">Ministries</a></li>
+                    <li><a href="sermons.html">Sermons</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
         </div>
-    </nav>
+    </header>
 
-    <!-- HERO SECTION - FIXED: Strong, clear, with schedule & CTA -->
-    <section class="hero" id="home">
+    <!-- Hero Section -->
+    <section class="hero">
         <div class="container">
             <div class="hero-content">
-                <h1 class="hero-title">Welcome to Grace Community Church</h1>
-                <p class="hero-tagline">Worship • Prayer • Service • Community</p>
-                <p class="hero-subtitle">Join us Sundays at 9:00 AM & 11:00 AM • Everyone is Welcome</p>
-                <div class="hero-cta">
-                    <a href="https://wa.me/254700000000?text=Hello%20Grace%20Community%20Church%2C%20I'd%20like%20to%20plan%20my%20first%20visit" 
-                       target="_blank" class="btn btn-primary">
-                        <i class="fab fa-whatsapp"></i> Plan Your Visit on WhatsApp
-                    </a>
-                    <a href="#services" class="btn btn-secondary">
-                        <i class="fas fa-clock"></i> View Service Times
-                    </a>
-                </div>
-                <div class="hero-highlights">
-                    <div class="highlight-item">
-                        <i class="fas fa-church"></i>
-                        <div>
-                            <strong>Sunday Worship</strong>
-                            <p>9:00 AM & 11:00 AM</p>
-                        </div>
-                    </div>
-                    <div class="highlight-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div>
-                            <strong>Our Location</strong>
-                            <p>Off Ngong Road, Nairobi</p>
-                        </div>
-                    </div>
-                    <div class="highlight-item">
-                        <i class="fas fa-hands-praying"></i>
-                        <div>
-                            <strong>Wednesday Prayer</strong>
-                            <p>6:30 PM</p>
-                        </div>
-                    </div>
+                <h1>Find Faith, Hope & Community</h1>
+                <p>Welcome home. We're glad you're here.</p>
+                <div class="hero-buttons">
+                    <a href="contact.html" class="btn">Plan a Visit</a>
+                    <a href="sermons.html" class="btn btn-secondary">Watch Sermons</a>
                 </div>
             </div>
         </div>
-        <div class="hero-overlay"></div>
     </section>
 
-    <!-- ABOUT SECTION - FIXED: Specific mission, vision, leadership -->
-    <section class="section about-section" id="about">
+    <!-- Welcome Section -->
+    <section class="welcome">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">About Our Church</h2>
-                <p class="section-subtitle">Serving families in Nairobi with faith, compassion, and community since 2015</p>
+                <h2>Welcome to Grace Community Church</h2>
+                <p>We're a loving community where everyone is welcome, nobody is perfect, and anything is possible.</p>
             </div>
             
-            <div class="about-grid">
-                <div class="about-card mission-card">
-                    <div class="about-icon">
-                        <i class="fas fa-bullseye"></i>
-                    </div>
-                    <h3>Our Mission</h3>
-                    <p>To share the transformative love of Christ through worship, discipleship, and compassionate service in our community.</p>
-                </div>
-                
-                <div class="about-card vision-card">
-                    <div class="about-icon">
-                        <i class="fas fa-eye"></i>
-                    </div>
-                    <h3>Our Vision</h3>
-                    <p>A thriving, multi-generational church family that impacts Nairobi through faith in action and authentic community.</p>
-                </div>
-                
-                <div class="about-card values-card">
-                    <div class="about-icon">
-                        <i class="fas fa-heart"></i>
-                    </div>
-                    <h3>Our Values</h3>
-                    <ul>
-                        <li>Biblical Teaching</li>
-                        <li>Authentic Community</li>
-                        <li>Heartfelt Worship</li>
-                        <li>Compassionate Service</li>
-                        <li>Joyful Generosity</li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="leadership-section">
-                <h3 class="section-subtitle">Church Leadership</h3>
-                <div class="leadership-grid">
-                    <div class="leader-card">
-                        <div class="leader-image">
-                            <i class="fas fa-user-tie"></i>
-                        </div>
-                        <h4>Pastor John Mwangi</h4>
-                        <p class="leader-role">Senior Pastor</p>
-                        <p class="leader-bio">Serving Grace Community Church since 2015 with a heart for discipleship and community outreach.</p>
-                    </div>
+            <div class="welcome-content">
+                <div class="welcome-text">
+                    <p>At Grace Community Church, we believe in creating a space where people can encounter God, grow in faith, and build meaningful relationships. Whether you're exploring faith for the first time or looking to deepen your spiritual journey, you have a place here.</p>
                     
-                    <div class="leader-card">
-                        <div class="leader-image">
-                            <i class="fas fa-user-tie"></i>
+                    <div class="service-times">
+                        <h3>Service Times</h3>
+                        <div class="times-grid">
+                            <div class="time-card">
+                                <h4>Sunday Worship</h4>
+                                <p><i class="far fa-clock"></i> 9:00 AM & 11:00 AM</p>
+                                <p><i class="fas fa-map-marker-alt"></i> Main Sanctuary</p>
+                            </div>
+                            <div class="time-card">
+                                <h4>Wednesday Prayer</h4>
+                                <p><i class="far fa-clock"></i> 7:00 PM</p>
+                                <p><i class="fas fa-map-marker-alt"></i> Prayer Chapel</p>
+                            </div>
+                            <div class="time-card">
+                                <h4>Sunday School</h4>
+                                <p><i class="far fa-clock"></i> 10:00 AM</h4>
+                                <p><i class="fas fa-map-marker-alt"></i> Education Building</p>
+                            </div>
                         </div>
-                        <h4>Rev. Sarah Kamau</h4>
-                        <p class="leader-role">Associate Pastor</p>
-                        <p class="leader-bio">Oversees family ministries and community development with over 10 years of experience.</p>
-                    </div>
-                    
-                    <div class="leader-card">
-                        <div class="leader-image">
-                            <i class="fas fa-user-tie"></i>
-                        </div>
-                        <h4>Deacon James Ochieng</h4>
-                        <p class="leader-role">Church Administrator</p>
-                        <p class="leader-bio">Manages church operations and coordinates volunteer teams to serve our congregation.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SERVICES SECTION - FIXED: Clear, specific times with hierarchy -->
-    <section class="section services-section" id="services">
+    <!-- Upcoming Events -->
+    <section class="events" style="background-color: var(--light);">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Service Times</h2>
-                <p class="section-subtitle">Join us for worship, prayer, and fellowship</p>
+                <h2>Upcoming Events</h2>
+                <p>Join us for fellowship and community activities</p>
             </div>
             
-            <div class="services-grid">
-                <div class="service-card featured">
-                    <div class="service-time-badge">
-                        <i class="fas fa-sun"></i>
-                        <span>SUNDAY</span>
+            <div class="events-grid">
+                <div class="event-card">
+                    <div class="event-date">
+                        <span class="day">15</span>
+                        <span class="month">Jan</span>
                     </div>
-                    <h3>Morning Worship</h3>
-                    <div class="service-details">
-                        <p class="service-time"><i class="fas fa-clock"></i> 9:00 AM - 10:30 AM</p>
-                        <p class="service-desc">Traditional service with hymns and liturgical elements. Children's church available.</p>
-                        <p class="service-note"><i class="fas fa-child"></i> Nursery & Kids program available</p>
+                    <div class="event-content">
+                        <h3>Community Picnic</h3>
+                        <p class="event-time"><i class="far fa-clock"></i> 12:00 PM - 4:00 PM</p>
+                        <p>Join us for a family-friendly picnic at the church park. Food, games, and fellowship for all ages.</p>
+                        <a href="events.html" class="btn btn-outline">Learn More</a>
                     </div>
-                    <a href="#contact" class="btn btn-mini">Get Directions</a>
                 </div>
                 
-                <div class="service-card">
-                    <div class="service-time-badge">
-                        <i class="fas fa-sun"></i>
-                        <span>SUNDAY</span>
+                <div class="event-card">
+                    <div class="event-date">
+                        <span class="day">22</span>
+                        <span class="month">Jan</span>
                     </div>
-                    <h3>Contemporary Service</h3>
-                    <div class="service-details">
-                        <p class="service-time"><i class="fas fa-clock"></i> 11:00 AM - 12:30 PM</p>
-                        <p class="service-desc">Modern worship with full band. Youth and children's programs running concurrently.</p>
-                        <p class="service-note"><i class="fas fa-music"></i> Live band and contemporary worship</p>
+                    <div class="event-content">
+                        <h3>Men's Breakfast</h3>
+                        <p class="event-time"><i class="far fa-clock"></i> 8:00 AM - 10:00 AM</p>
+                        <p>Monthly men's fellowship with breakfast and Bible study. All men are welcome!</p>
+                        <a href="events.html" class="btn btn-outline">Learn More</a>
                     </div>
-                    <a href="#contact" class="btn btn-mini">Plan Your Visit</a>
                 </div>
                 
-                <div class="service-card">
-                    <div class="service-time-badge">
-                        <i class="fas fa-users"></i>
-                        <span>WEDNESDAY</span>
+                <div class="event-card">
+                    <div class="event-date">
+                        <span class="day">29</span>
+                        <span class="month">Jan</span>
                     </div>
-                    <h3>Midweek Prayer</h3>
-                    <div class="service-details">
-                        <p class="service-time"><i class="fas fa-clock"></i> 6:30 PM - 8:00 PM</p>
-                        <p class="service-desc">Bible study, prayer meeting, and small groups for deeper spiritual growth.</p>
-                        <p class="service-note"><i class="fas fa-hands-praying"></i> Prayer and fellowship focus</p>
+                    <div class="event-content">
+                        <h3>Youth Night</h3>
+                        <p class="event-time"><i class="far fa-clock"></i> 6:30 PM - 9:00 PM</p>
+                        <p>Middle and high school students join us for games, worship, and relevant Bible teaching.</p>
+                        <a href="events.html" class="btn btn-outline">Learn More</a>
                     </div>
-                    <a href="#contact" class="btn btn-mini">Join a Group</a>
                 </div>
-                
-                <div class="service-card">
-                    <div class="service-time-badge">
-                        <i class="fas fa-users"></i>
-                        <span>FRIDAY</span>
-                    </div>
-                    <h3>Youth Fellowship</h3>
-                    <div class="service-details">
-                        <p class="service-time"><i class="fas fa-clock"></i> 5:00 PM - 7:00 PM</p>
-                        <p class="service-desc">Weekly gathering for youth (ages 13-18) with relevant teaching and activities.</p>
-                        <p class="service-note"><i class="fas fa-gamepad"></i> Games, worship, and Bible study</p>
-                    </div>
-                    <a href="#contact" class="btn btn-mini">Youth Info</a>
-                </div>
+            </div>
+            
+            <div class="text-center" style="margin-top: 3rem;">
+                <a href="events.html" class="btn">View All Events</a>
             </div>
         </div>
     </section>
 
-    <!-- MINISTRIES SECTION -->
-    <section class="section ministries-section" id="ministries">
+    <!-- Latest Sermons -->
+    <section class="sermons">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Church Ministries</h2>
-                <p class="section-subtitle">Find your place to connect, grow, and serve</p>
+                <h2>Latest Sermons</h2>
+                <p>Messages of hope, faith, and transformation</p>
             </div>
             
-            <div class="ministries-grid">
-                <div class="ministry-card">
-                    <div class="ministry-icon">
-                        <i class="fas fa-child"></i>
+            <div class="sermons-grid">
+                <div class="sermon-card">
+                    <div class="sermon-image">
+                        <img src="images/services/worship-service-1.jpg" alt="Pastor John preaching" loading="lazy">
                     </div>
-                    <h3>Children's Ministry</h3>
-                    <p>Age-appropriate Bible teaching and activities for children ages 3-12 during Sunday services.</p>
-                    <a href="#contact" class="ministry-link">Learn More →</a>
+                    <div class="sermon-content">
+                        <h3>Living with Purpose</h3>
+                        <div class="sermon-meta">
+                            <span><i class="far fa-calendar"></i> Jan 7, 2024</span>
+                            <span><i class="fas fa-user"></i> Pastor John</span>
+                        </div>
+                        <p>Discover how to find and fulfill God's purpose for your life through faith and obedience.</p>
+                        <div class="audio-player">
+                            <div class="player-controls">
+                                <button class="play-btn"><i class="fas fa-play"></i></button>
+                                <span>45:22</span>
+                            </div>
+                        </div>
+                        <a href="sermons.html" class="btn btn-outline">Listen Now</a>
+                    </div>
                 </div>
                 
-                <div class="ministry-card">
-                    <div class="ministry-icon">
-                        <i class="fas fa-users"></i>
+                <div class="sermon-card">
+                    <div class="sermon-image">
+                        <img src="images/about/baptism-service.jpg" alt="Baptism service" loading="lazy">
                     </div>
-                    <h3>Youth Ministry</h3>
-                    <p>Friday night gatherings and Sunday programs for teenagers with relevant biblical teaching.</p>
-                    <a href="#contact" class="ministry-link">Learn More →</a>
+                    <div class="sermon-content">
+                        <h3>The Power of Forgiveness</h3>
+                        <div class="sermon-meta">
+                            <span><i class="far fa-calendar"></i> Dec 31, 2023</span>
+                            <span><i class="fas fa-user"></i> Pastor John</span>
+                        </div>
+                        <p>Learn how forgiveness can transform relationships and bring healing to your life.</p>
+                        <div class="audio-player">
+                            <div class="player-controls">
+                                <button class="play-btn"><i class="fas fa-play"></i></button>
+                                <span>38:45</span>
+                            </div>
+                        </div>
+                        <a href="sermons.html" class="btn btn-outline">Listen Now</a>
+                    </div>
                 </div>
                 
-                <div class="ministry-card">
-                    <div class="ministry-icon">
-                        <i class="fas fa-female"></i>
+                <div class="sermon-card">
+                    <div class="sermon-image">
+                        <img src="images/about/church-community-1.jpg" alt="Church community gathering" loading="lazy">
                     </div>
-                    <h3>Women's Fellowship</h3>
-                    <p>Monthly meetings, Bible studies, and outreach initiatives for women of all ages.</p>
-                    <a href="#contact" class="ministry-link">Learn More →</a>
-                </div>
-                
-                <div class="ministry-card">
-                    <div class="ministry-icon">
-                        <i class="fas fa-hands-helping"></i>
+                    <div class="sermon-content">
+                        <h3>Building Strong Families</h3>
+                        <div class="sermon-meta">
+                            <span><i class="far fa-calendar"></i> Dec 24, 2023</span>
+                            <span><i class="fas fa-user"></i> Sarah Johnson</span>
+                        </div>
+                        <p>Biblical principles for creating healthy, loving families that honor God.</p>
+                        <div class="audio-player">
+                            <div class="player-controls">
+                                <button class="play-btn"><i class="fas fa-play"></i></button>
+                                <span>42:18</span>
+                            </div>
+                        </div>
+                        <a href="sermons.html" class="btn btn-outline">Listen Now</a>
                     </div>
-                    <h3>Community Outreach</h3>
-                    <p>Serving our local community through food distribution, medical camps, and educational support.</p>
-                    <a href="#contact" class="ministry-link">Get Involved →</a>
                 </div>
+            </div>
+            
+            <div class="text-center" style="margin-top: 3rem;">
+                <a href="sermons.html" class="btn">View All Sermons</a>
             </div>
         </div>
     </section>
 
-    <!-- CTA SECTION - FIXED: Clear, conversion-focused -->
-    <section class="section cta-section">
-        <div class="container">
-            <div class="cta-content">
-                <h2 class="cta-title">Have Questions? Want to Visit?</h2>
-                <p class="cta-subtitle">We're here to help you plan your first visit or answer any questions you may have.</p>
-                <div class="cta-buttons">
-                    <a href="https://wa.me/254700000000?text=Hello%20Grace%20Community%20Church%2C%20I%20have%20questions%20about%20visiting" 
-                       target="_blank" class="btn btn-whatsapp-large">
-                        <i class="fab fa-whatsapp"></i> Message Us on WhatsApp
-                    </a>
-                    <a href="#contact" class="btn btn-outline-light">
-                        <i class="fas fa-calendar-alt"></i> Plan Your First Visit
-                    </a>
-                    <a href="https://wa.me/254700000000?text=Hello%2C%20I'd%20like%20to%20submit%20a%20prayer%20request" 
-                       target="_blank" class="btn btn-outline-light">
-                        <i class="fas fa-pray"></i> Submit Prayer Request
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CONTACT SECTION -->
-    <section class="section contact-section" id="contact">
+    <!-- Visitor Journey -->
+    <section class="journey" style="background-color: var(--light);">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Visit Us</h2>
-                <p class="section-subtitle">We'd love to welcome you to our church family</p>
+                <h2>Your Journey Starts Here</h2>
+                <p>Four simple steps to get connected at Grace Community Church</p>
             </div>
             
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <div class="contact-card">
-                        <div class="contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <h3>Our Location</h3>
-                        <p>Grace Community Church<br>
-                           Off Ngong Road, Near Adams Arcade<br>
-                           Nairobi, Kenya</p>
-                        <a href="https://maps.google.com" target="_blank" class="btn-mini">Open in Google Maps</a>
-                    </div>
-                    
-                    <div class="contact-card">
-                        <div class="contact-icon">
-                            <i class="fas fa-clock"></i>
-                        </div>
-                        <h3>Service Times Recap</h3>
-                        <div class="service-times-list">
-                            <p><strong>Sunday:</strong> 9:00 AM & 11:00 AM</p>
-                            <p><strong>Wednesday:</strong> 6:30 PM (Prayer Meeting)</p>
-                            <p><strong>Friday:</strong> 5:00 PM (Youth Fellowship)</p>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-card highlight">
-                        <div class="contact-icon">
-                            <i class="fab fa-whatsapp"></i>
-                        </div>
-                        <h3>Quick Contact</h3>
-                        <p>Have questions or need prayer? Chat with us on WhatsApp. We typically respond within a few hours.</p>
-                        <a href="https://wa.me/254700000000?text=Hello%20Grace%20Community%20Church" 
-                           target="_blank" class="btn btn-whatsapp">
-                            <i class="fab fa-whatsapp"></i> WhatsApp: +254 700 000 000
-                        </a>
-                    </div>
+            <div class="journey-steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Visit</h3>
+                    <p>Join us for a Sunday service. Dress is casual, and you'll be welcomed just as you are.</p>
                 </div>
                 
-                <div class="contact-map">
-                    <div class="map-placeholder">
-                        <i class="fas fa-map-marked-alt"></i>
-                        <h3>Find Us on Google Maps</h3>
-                        <p>Interactive map would be embedded here</p>
-                        <div class="map-actions">
-                            <a href="https://maps.google.com" target="_blank" class="btn-mini">Get Directions</a>
-                            <a href="#contact" class="btn-mini">Parking Information</a>
-                        </div>
-                    </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Connect</h3>
+                    <p>Attend a newcomers lunch to meet our pastors and learn more about our church.</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Grow</h3>
+                    <p>Join a small group or Bible study to build relationships and grow in your faith.</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Serve</h3>
+                    <p>Discover your gifts and find a place to serve in our church or community.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- FOOTER - FIXED: Comprehensive with all info -->
-    <footer class="footer">
+    <!-- Footer -->
+    <footer>
         <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <div class="footer-logo">
-                        <div class="logo-icon">✝</div>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo" style="margin-bottom: 1.5rem;">
+                        <div class="logo-icon">
+                            <i class="fas fa-church"></i>
+                        </div>
                         <div class="logo-text">
-                            <span class="logo-primary">Grace Community Church</span>
-                            <span class="logo-subtitle">Nairobi, Kenya</span>
+                            <h1 style="color: white; font-size: 1.5rem;">Grace Community Church</h1>
+                            <p>Find Faith, Hope & Community</p>
                         </div>
                     </div>
-                    <p class="footer-description">A welcoming Christian community where everyone belongs, grows, and serves together.</p>
-                    <div class="footer-disclaimer">
-                        <p><i class="fas fa-info-circle"></i> <strong>Demo Notice:</strong> This is a demo church website created by KaynAero Technocrats for demonstration purposes.</p>
+                    <p>A welcoming community where everyone can find faith, hope, and love.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
                     </div>
                 </div>
                 
-                <div class="footer-col">
-                    <h3>Quick Links</h3>
-                    <ul class="footer-links">
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#services">Service Times</a></li>
-                        <li><a href="#ministries">Ministries</a></li>
-                        <li><a href="#contact">Visit Us</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-col">
+                <div class="footer-section">
                     <h3>Contact Info</h3>
-                    <ul class="footer-contact">
-                        <li><i class="fas fa-map-marker-alt"></i> Off Ngong Road, Nairobi</li>
-                        <li><i class="fas fa-phone"></i> +254 700 000 000</li>
-                        <li><i class="fas fa-envelope"></i> info@gracecommunitydemo.ke</li>
-                        <li><i class="fab fa-whatsapp"></i> WhatsApp: +254 700 000 000</li>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Grace Street, Anytown, USA 12345</li>
+                        <li><i class="fas fa-phone"></i> (555) 123-4567</li>
+                        <li><i class="fas fa-envelope"></i> info@gracecommunitychurch.org</li>
                     </ul>
                 </div>
                 
-                <div class="footer-col">
-                    <h3>First Time Visiting?</h3>
-                    <p>Here's what to expect on your first visit:</p>
-                    <ul class="footer-visitor">
-                        <li><i class="fas fa-check-circle"></i> Friendly greeters to welcome you</li>
-                        <li><i class="fas fa-check-circle"></i> Clear signage and directions</li>
-                        <li><i class="fas fa-check-circle"></i> Programs for children and youth</li>
-                        <li><i class="fas fa-check-circle"></i> Casual dress is welcome</li>
+                <div class="footer-section">
+                    <h3>Service Times</h3>
+                    <ul class="service-times">
+                        <li>Sunday Worship <span>9:00 AM & 11:00 AM</span></li>
+                        <li>Sunday School <span>10:00 AM</span></li>
+                        <li>Wednesday Prayer <span>7:00 PM</span></li>
                     </ul>
-                    <a href="#contact" class="btn btn-outline-light">Plan Your First Visit</a>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="ministries.html">Ministries</a></li>
+                        <li><a href="sermons.html">Sermons</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
                 </div>
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; 2024 Grace Community Church (Demo). This is a demo website created by <strong>KaynAero Technocrats</strong> to demonstrate best practices for church websites in Kenya.</p>
-                <p>Nairobi, Kenya | WhatsApp: +254 700 000 000 | <a href="https://maps.google.com" target="_blank">Map Link</a></p>
+                <p>&copy; <span id="current-year">2024</span> Grace Community Church. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
-    <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/254700000000?text=Hello%20Grace%20Community%20Church%2C%20I%20visited%20your%20website%20and%20would%20like%20more%20information" 
-       target="_blank" class="whatsapp-float">
-        <i class="fab fa-whatsapp"></i>
-        <span>Chat with us</span>
-    </a>
-
+    <!-- JavaScript -->
     <script src="js/script.js"></script>
 </body>
 </html>

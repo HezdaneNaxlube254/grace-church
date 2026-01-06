@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Grace Community Church</title>
+    <meta name="description" content="Get in touch with Grace Community Church. Visit us, contact our staff, or send us a message.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-church"></i>
+                </div>
+                <div class="logo-text">
+                    <h1>Grace Community Church</h1>
+                    <p>Find Faith, Hope & Community</p>
+                </div>
+            </div>
+            
+            <button class="hamburger" aria-label="Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="ministries.html">Ministries</a></li>
+                    <li><a href="sermons.html">Sermons</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/hero/church-exterior-hero.jpg') center/cover no-repeat;">
+        <div class="container">
+            <div class="hero-content">
+                <h1>We'd Love to Hear From You</h1>
+                <p>Get in touch with our church family</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Information -->
+    <section class="contact-info-section">
+        <div class="container">
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h2>Visit Us</h2>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <h4>Address</h4>
+                            <p>123 Grace Street<br>Anytown, USA 12345</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>(555) 123-4567</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h4>Email</h4>
+                            <p>info@gracecommunitychurch.org</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="far fa-clock"></i>
+                        </div>
+                        <div>
+                            <h4>Office Hours</h4>
+                            <p>Monday-Friday: 9:00 AM - 5:00 PM<br>Saturday: 9:00 AM - 12:00 PM</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-church"></i>
+                        </div>
+                        <div>
+                            <h4>Service Times</h4>
+                            <p>Sunday: 9:00 AM & 11:00 AM<br>Wednesday Prayer: 7:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Contact Form -->
+                <div class="contact-form">
+                    <h2>Send Us a Message</h2>
+                    <p>Have questions or need prayer? We're here to help.</p>
+                    
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" class="form-control">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Subject *</label>
+                            <select id="subject" name="subject" class="form-control" required>
+                                <option value="">Select a topic</option>
+                                <option value="general">General Inquiry</option>
+                                <option value="prayer">Prayer Request</option>
+                                <option value="visit">Plan a Visit</option>
+                                <option value="membership">Membership Information</option>
+                                <option value="ministry">Ministry Involvement</option>
+                                <option value="giving">Giving Questions</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" class="form-control" rows="5" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Find Us</h2>
+                <p>Visit us at our location</p>
+            </div>
+            
+            <div class="map-container">
+                <div class="map-placeholder">
+                    <div style="text-align: center;">
+                        <i class="fas fa-map-marked-alt" style="font-size: 3rem; margin-bottom: 1rem;"></i>
+                        <h3>Church Location</h3>
+                        <p>123 Grace Street, Anytown, USA 12345</p>
+                        <a href="https://maps.google.com" target="_blank" class="btn" style="margin-top: 1rem;">
+                            <i class="fas fa-directions"></i> Get Directions
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Staff Directory -->
+    <section class="staff" style="background-color: var(--light);">
+        <div class="container">
+            <div class="section-header">
+                <h2>Staff Directory</h2>
+                <p>Contact our ministry leaders directly</p>
+            </div>
+            
+            <div class="staff-grid">
+                <div class="staff-member">
+                    <h3>John Davis</h3>
+                    <p class="staff-role">Senior Pastor</p>
+                    <p><i class="fas fa-envelope"></i> john.davis@gracecommunitychurch.org</p>
+                    <p><i class="fas fa-phone"></i> Ext. 101</p>
+                </div>
+                
+                <div class="staff-member">
+                    <h3>Sarah Johnson</h3>
+                    <p class="staff-role">Worship Director</p>
+                    <p><i class="fas fa-envelope"></i> sarah.johnson@gracecommunitychurch.org</p>
+                    <p><i class="fas fa-phone"></i> Ext. 102</p>
+                </div>
+                
+                <div class="staff-member">
+                    <h3>Michael Rodriguez</h3>
+                    <p class="staff-role">Youth Pastor</p>
+                    <p><i class="fas fa-envelope"></i> michael.rodriguez@gracecommunitychurch.org</p>
+                    <p><i class="fas fa-phone"></i> Ext. 103</p>
+                </div>
+                
+                <div class="staff-member">
+                    <h3>Lisa Thompson</h3>
+                    <p class="staff-role">Children's Ministry Director</p>
+                    <p><i class="fas fa-envelope"></i> lisa.thompson@gracecommunitychurch.org</p>
+                    <p><i class="fas fa-phone"></i> Ext. 104</p>
+                </div>
+                
+                <div class="staff-member">
+                    <h3>Robert Williams</h3>
+                    <p class="staff-role">Administrative Pastor</p>
+                    <p><i class="fas fa-envelope"></i> robert.williams@gracecommunitychurch.org</p>
+                    <p><i class="fas fa-phone"></i> Ext. 105</p>
+                </div>
+                
+                <div class="staff-member">
+                    <h3>Jennifer Martinez</h3>
+                    <p class="staff-role">Office Administrator</p>
+                    <p><i class="fas fa-envelope"></i> office@gracecommunitychurch.org</p>
+                    <p><i class="fas fa-phone"></i> Ext. 100</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+        <div class="container">
+            <div class="section-header">
+                <h2>Frequently Asked Questions</h2>
+                <p>Quick answers to common questions</p>
+            </div>
+            
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>When are your services?</h3>
+                    <p>We have two Sunday worship services at 9:00 AM and 11:00 AM. We also have a Wednesday prayer service at 7:00 PM.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>What should I wear?</h3>
+                    <p>Come as you are! You'll see everything from jeans to suits. We care more about you than what you wear.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>Do you have programs for children?</h3>
+                    <p>Yes! We have excellent children's programs for all ages during both Sunday services and Wednesday evenings.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>How do I become a member?</h3>
+                    <p>We offer a New Members Class monthly. Contact the office or check our events page for the next class date.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>How can I get involved in serving?</h3>
+                    <p>We have many opportunities to serve! Contact any ministry leader or attend our monthly "Discover Your Ministry" class.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>Do you offer counseling?</h3>
+                    <p>Yes, our pastors offer pastoral counseling. Contact the office to schedule an appointment.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo" style="margin-bottom: 1.5rem;">
+                        <div class="logo-icon">
+                            <i class="fas fa-church"></i>
+                        </div>
+                        <div class="logo-text">
+                            <h1 style="color: white; font-size: 1.5rem;">Grace Community Church</h1>
+                            <p>Find Faith, Hope & Community</p>
+                        </div>
+                    </div>
+                    <p>A welcoming community where everyone can find faith, hope, and love.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Grace Street, Anytown, USA 12345</li>
+                        <li><i class="fas fa-phone"></i> (555) 123-4567</li>
+                        <li><i class="fas fa-envelope"></i> info@gracecommunitychurch.org</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Service Times</h3>
+                    <ul class="service-times">
+                        <li>Sunday Worship <span>9:00 AM & 11:00 AM</span></li>
+                        <li>Sunday School <span>10:00 AM</span></li>
+                        <li>Wednesday Prayer <span>7:00 PM</span></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="ministries.html">Ministries</a></li>
+                        <li><a href="sermons.html">Sermons</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year">2024</span> Grace Community Church. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+    
+    <style>
+    .staff-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+    
+    .staff-member {
+        background: white;
+        padding: 1.5rem;
+        border-radius: var(--border-radius);
+        box-shadow: var(--shadow);
+    }
+    
+    .staff-role {
+        color: var(--primary);
+        font-weight: 600;
+        margin-bottom: 1rem;
+    }
+    
+    .faq-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+    
+    .faq-item {
+        background: white;
+        padding: 1.5rem;
+        border-radius: var(--border-radius);
+        box-shadow: var(--shadow);
+    }
+    
+    .faq-item h3 {
+        color: var(--primary);
+        margin-bottom: 0.5rem;
+    }
+    </style>
+</body>
+</html>
